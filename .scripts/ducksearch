@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Gives a dmenu prompt to search DuckDuckGo.
+# Without input, will open DuckDuckGo.com.
+# Anything else, it search it.
+
+# Source settings from .dmenurc
+if ! [ -f "$HOME/.dmenurc" ]; then
+	cp /usr/share/dmenu/dmenurc $HOME/.dmenurc
+fi
+. $HOME/.dmenurc
+
+pgrep -x dmenu && exit
+
+choice=$(echo "" | dmenu -i -p "Search DuckDuckGo:" $DMENU_OPTIONS) || exit 1
+
+if [ "$choice" = ""  ]; then
+	$BROWSER "https://duckduckgo.com"
+else
+	$BROWSER "https://duckduckgo.com/?q=$choice&t=ffab&atb=v1-1"
+fi

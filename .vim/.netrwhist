@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/yaroslav/.config/polybar'
+let g:netrw_dirhist_2='/home/yaroslav/Documents/Webs/webart/plintex/plintex/advantages/technologies'
+let g:netrw_dirhist_3='/home/yaroslav/.config/polybar'
+let g:netrw_dirhist_4='/home/yaroslav/Documents/ITMO/Семестр 5/тэц/laba1/отчет'

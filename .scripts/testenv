@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "i3 environment test" >> ~/envtest
+date >> envtest
+printenv >> ~/envtest

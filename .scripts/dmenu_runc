@@ -1,0 +1,5 @@
+#!/bin/bash
+
+. $HOME/.dmenurc
+
+dmenu_run $DMENU_OPTIONS
