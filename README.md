@@ -6,7 +6,7 @@ My own config files for my setup of i3wm/i3-gaps. I started set up i3 on Manjaro
 
 ### From manjaro's official repositories
 
-`pacman -S i3-gaps python polybar compton mupdf ranger mopidy ncmpcpp mpv gvim dunst cronie feh networkmanager network-manager-applet scrot tmux alsamixer i3-scrot i3exit ffmpeg w3m xcape youtube-dl youtube-viewer newsboat wget python-pywal arandr firefox xclip xorg-xprop xorg-xwininfo`
+`pacman -S i3-gaps python polybar compton mupdf ranger mopidy ncmpcpp mpc mpv gvim dunst cronie feh networkmanager network-manager-applet scrot tmux alsamixer i3-scrot i3exit ffmpeg w3m xcape youtube-dl youtube-viewer newsboat wget python-pywal arandr firefox xclip xorg-xprop xorg-xwininfo`
 
 ### On Void
 
