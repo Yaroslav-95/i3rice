@@ -53,7 +53,7 @@ screencastalsa() { \
 	-s $(xdpyinfo | grep dimensions | awk '{print $2;}') \
 	-i :0.0 \
 	-thread_queue_size 1024 \
- 	-f alsa -ar 44100 -i hw:1 \
+ 	-f alsa -ar 44100 -i plughw:2 \
  	-c:v libx264 -r 30 -c:a flac \
 	"$HOME/screencast-$(date '+%y%m%d-%H%M-%S').mkv" &
 	echo $! > ~/.recordingpid
@@ -81,7 +81,7 @@ audiopulse() { \
 
 audioalsa() { \
 	ffmpeg -y \
-	-f alsa -ar 44100 -i hw:1 \
+	-f alsa -ar 44100 -i plughw:2 \
 	"$HOME/audio-$(date '+%y%m%d-%H%M-%S').flac" &
 	echo $! > ~/.recordingpid
 	updateicon "🎙️"
@@ -103,8 +103,8 @@ asktoend() { \
 
 
 case "$1" in
-	screencast) screencastpulse;;
-	audio) audiopulse;;
+	screencast) screencastalsa;;
+	audio) audioalsa;;
 	video) video;;
 	kill) killrecording;;
 	*) ([ -f ~/.recordingpid ] && asktoend && exit) || askrecording;;
