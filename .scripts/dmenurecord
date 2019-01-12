@@ -15,6 +15,8 @@ if ! [ -f "$HOME/.dmenurc" ]; then
 fi
 . $HOME/.dmenurc
 
+killall -q compton
+
 updateicon() { \
 	echo "$1" > ~/.recordingicon
 	pkill -RTMIN+9 i3blocks
@@ -30,6 +32,8 @@ killrecording() {
 	# even after SIGTERM, ffmpeg may still run, so SIGKILL it.
 	sleep 3
 	kill -9 "$recpid"
+    compton -b
+    notify-send "Recording stopped"
 	exit
 	}
 
@@ -90,8 +94,8 @@ audioalsa() { \
 askrecording() { \
 	choice=$(printf "screencast\\nvideo\\naudio" | dmenu -i -p "Select recording style:" $DMENU_OPTIONS)
 	case "$choice" in
-		screencast) screencastpulse;;
-		audio) audiopulse;;
+		screencast) screencastalsa;;
+		audio) audioalsa;;
 		video) video;;
 	esac
 	}
