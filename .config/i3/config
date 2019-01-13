@@ -128,7 +128,7 @@ bindsym $mod+i		exec --no-startup-id inkscape; gaps inner current set 0; gaps ou
 # Dropdown/scratchpad applications
 bindsym $mod+p exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+v exec --no-startup-id dgspawn vk-messenger VK
-bindsym $mod+Shift+t exec --no-startup-id dgspawn Telegram TelegramDesktop
+bindsym $mod+Shift+t exec --no-startup-id dgspawn telegram-desktop TelegramDesktop
 
 
 #focus_follows_mouse no
