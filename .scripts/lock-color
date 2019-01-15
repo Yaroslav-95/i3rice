@@ -49,7 +49,7 @@ i3lock \
     --veriftext="Verifying..."  \
     --wrongtext="Nope!" \
     --noinputtext="BLANK" \
-    --time-font=monoidnerdfontmono  \
+    --time-font=monoisome  \
     --date-font=ibmplexsans  \
     --timesize=40  \
     --datesize=24  \
