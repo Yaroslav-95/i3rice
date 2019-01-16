@@ -15,10 +15,10 @@ case "$1" in
         dm-tool switch-to-greeter
         ;;
     suspend)
-        lock-color && $logind suspend
+        lock-color & sleep 1 && $logind suspend
         ;;
     hibernate)
-        lock-color && $logind hibernate
+        lock-color & sleep 1 && $logind hibernate
         ;;
     reboot)
         $logind reboot

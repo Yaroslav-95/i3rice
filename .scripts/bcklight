@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$1" in
+    inc)
+        xbacklight -inc 5; notify-send "Brightness $(xbacklight -get)%"
+        ;;
+    dec)
+        xbacklight -dec 5; notify-send "Brightness $(xbacklight -get)%"
+        ;;
+    *)
+        echo "Missing arguments, [inc|dec]"
+        exit 2
+esac
+
+exit 0

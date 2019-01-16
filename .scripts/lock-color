@@ -14,7 +14,7 @@ T='#dac99dff'  # text
 W='#880000bb'  # wrong
 V='#023982dd'  # verifying
 # Approximate timeout rate in milliseconds (checked every 5 seconds).
-timeout="10000"
+timeout="20000"
 
 # Take a screenshot:
 #scrot /tmp/screen.png
