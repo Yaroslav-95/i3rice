@@ -12,7 +12,7 @@ source ~/.scripts/git-prompt.sh
 export PS1="\[\033[30;43m\] \$(__git_ps1)\[$(tput sgr0)\]\[\033[48;5;2;33m\]\[\033[30m\] \u\[\033[38;5;2;48;5;4m\]\[\033[38;5;0m\]\h \[$(tput sgr0)\]\[\033[38;5;4;48;5;0m\]\[\033[38;5;38m\] \w\[$(tput sgr0)\]\[\033[00;38;5;0m\]\n\[$(tput sgr0)\]\[\033[48;5;0;38;5;2m\]\$\[$(tput sgr0)\]\[\033[00;38;5;0m\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]"
 
 export PATH=$PATH:$HOME/.scripts
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="xterm"
 export BROWSER="firefox"
 export MOZ_USE_XINPUT2=1
