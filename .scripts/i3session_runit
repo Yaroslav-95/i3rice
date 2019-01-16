@@ -1,9 +1,6 @@
 #!/bin/sh
 # /usr/bin/i3exit
 
-# on void just sudo
-[[ $(cat /proc/1/comm) == "systemd" ]] && logind=systemctl || logind=loginctl
-
 case "$1" in
     lock)
         lock-color
@@ -15,16 +12,16 @@ case "$1" in
         dm-tool switch-to-greeter
         ;;
     suspend)
-        lock-color && $logind suspend
+        lock-color && i3suspend
         ;;
     hibernate)
-        lock-color && $logind hibernate
+        lock-color && i3hibernate
         ;;
     reboot)
-        $logind reboot
+        i3reboot
         ;;
     shutdown)
-        $logind poweroff
+        i3shutdown
         ;;
     *)
         echo "== ! i3exit: missing or invalid argument ! =="

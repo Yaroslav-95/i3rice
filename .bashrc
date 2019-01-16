@@ -46,7 +46,7 @@ alias nf="clear && neofetch" # Le Redditfetch
 # Some aliases
 alias p="sudo pacman"
 alias SS="sudo systemctl"
-alias v="vim"
+alias v="nvim"
 alias r="ranger"
 alias sr="sudo ranger"
 alias ka="killall"
