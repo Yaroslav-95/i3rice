@@ -9,17 +9,17 @@ shopt -s autocd #Allows you to cd into directory merely by typing the directory 
 
 source ~/.scripts/git-prompt.sh
 #export PS1="\[\033[30;43m\][\t]\[$(tput sgr0)\]\[\033[33;40m\]\[\033[38;5;12m\]\$(__git_ps1) $(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;3m\]@\[$(tput sgr0)\]\[\033[38;5;2m\]\h:\[$(tput sgr0)\]\[\033[38;5;38m\]\w\[$(tput sgr0)\]\[\033[38;5;6m\]\n\[$(tput sgr0)\]\[\033[38;5;2m\]>\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
-export PS1="\[\033[30;43m\] \$(__git_ps1)\[$(tput sgr0)\]\[\033[48;5;2;33m\]\[\033[30m\] \u\[\033[38;5;2;48;5;4m\]\[\033[38;5;0m\]\h \[$(tput sgr0)\]\[\033[38;5;4;48;5;0m\]\[\033[38;5;38m\] \w\[$(tput sgr0)\]\[\033[00;38;5;0m\]\n\[$(tput sgr0)\]\[\033[48;5;0;38;5;2m\]\$\[$(tput sgr0)\]\[\033[00;38;5;0m\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]"
+export PS1="\[\033[30;48;5;9m\] \$(__git_ps1)\[$(tput sgr0)\]\[\033[48;5;11;38;5;9m\]\[\033[30m\] \u \[\033[38;5;11;48;5;6m\]\[\033[38;5;0m\] \h \[$(tput sgr0)\]\[\033[38;5;6;48;5;0m\]\[\033[38;5;38m\] \w\[$(tput sgr0)\]\[\033[00;38;5;0m\]\n\[$(tput sgr0)\]\[\033[48;5;0;38;5;2m\]\$\[$(tput sgr0)\]\[\033[00;38;5;0m\]\[$(tput sgr0)\]\[\033[38;5;15m\]\[$(tput sgr0)\]"
 
 export PATH=$PATH:$HOME/.scripts
 export EDITOR="nvim"
-export TERMINAL="xterm"
+export TERMINAL="rxvt"
 export BROWSER="firefox"
 export MOZ_USE_XINPUT2=1
 
 # User specific environment and startup programs:
 export LANG=en_US.UTF-8
-export TERM=st
+export TERM=rxvt
 
 #Generic shortcuts:
 alias music="ncmpcpp"

@@ -3,7 +3,7 @@
 #
 
 ## define the font for dmenu to be used
-DMENU_FN="Inconsolata-11"
+DMENU_FN="FuraCodeNerdFontMono-11"
 
 ## background colour for unselected menu-items
 DMENU_NB="#000000"
@@ -12,7 +12,7 @@ DMENU_NB="#000000"
 DMENU_NF="#DAC99D"
 
 ## background colour for selected menu-items
-DMENU_SB="#00559A"
+DMENU_SB="#458588"
 
 ## textcolour for selected menu-items
 DMENU_SF="#F9FAF9"

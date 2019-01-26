@@ -14,7 +14,7 @@ T='#dac99dff'  # text
 W='#880000bb'  # wrong
 V='#023982dd'  # verifying
 # Approximate timeout rate in milliseconds (checked every 5 seconds).
-timeout="20000"
+timeout="30000"
 
 # Take a screenshot:
 #scrot /tmp/screen.png
@@ -49,9 +49,9 @@ i3lock \
     --veriftext="Verifying..."  \
     --wrongtext="Nope!" \
     --noinputtext="BLANK" \
-    --time-font=monoisome  \
+    --time-font=furacodenerdfontmono  \
     --date-font=ibmplexsans  \
-    --timesize=40  \
+    --timesize=45  \
     --datesize=24  \
     -i ~/.config/lockwall.png
 
