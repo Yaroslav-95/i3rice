@@ -9,10 +9,19 @@ let mapleader =" "
 	filetype plugin on
 	syntax on
     set background=dark
-"    colorscheme wal
-"    colorscheme solarized
+    set termguicolors
+    set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
+    let g:gruvbox_italic=1
+    let g:airline_theme='bubblegum'
+    let g:airline#extensions#tabline#enabled = 1
+    colorscheme gruvbox
 "	set encoding=utf-8
 	set number
+
+"   airline
+    let g:airline_left_sep=''
+    let g:airline_right_sep=''
+    let g:airline_inactive_collapse=1
 
 " indentation
 	filetype plugin indent on
