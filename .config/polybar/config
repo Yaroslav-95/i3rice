@@ -46,11 +46,11 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = FuraCode Nerd Font Mono:pixelsize=9;1
-font-1 = icomoon:pixelsize=10;1.5
-font-2 = Symbola:pixelsize=12;1.5
+font-0 = FuraCode Nerd Font Mono:pixelsize=11;1
+font-1 = icomoon:pixelsize=11;1.5
+font-2 = Symbola:pixelsize=13;1.5
 
-modules-left = i3 mpd volume
+modules-left = i3 recordstatus mpd volume
 modules-center = date
 modules-right = xkeyboard weather filesystem memory battery ipadd
 
@@ -127,7 +127,7 @@ label-focused = %index%%icon%
 label-focused-background = ${xrdb:color6}
 label-focused-foreground = #ffffff
 label-focused-underline = ${xrdb:color14}
-label-focused-padding = ${padding.large}
+label-focused-padding = ${padding.small}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
@@ -343,28 +343,44 @@ full-at = 98
 
 ;format-charging = Charging... <label-charging>
 format-charging = <animation-charging> <label-charging>
+format-charging-background = ${colors.background-alt2}
+format-charging-padding = 1
 #format-charging-underline = ${xrdb:color3}
 
 ;format-discharging = <label-discharging>
 format-discharging = <ramp-capacity> <label-discharging>
+format-discharging-background = ${colors.background-alt2}
+format-discharging-padding = 1
 #format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = ""
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground}
 #format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-5 = 
+ramp-capacity-6 = 
+ramp-capacity-7 = 
+ramp-capacity-8 = 
+ramp-capacity-9 = 
 ramp-capacity-foreground = ${colors.foreground}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-5 = 
+animation-charging-6 = 
+animation-charging-7 = 
+animation-charging-8 = 
+animation-charging-9 = 
 animation-charging-foreground = ${colors.foreground}
-animation-charging-framerate = 750
+animation-charging-framerate = 250
 
 [module/temperature]
 type = internal/temperature
@@ -439,4 +455,12 @@ exec = ~/.scripts/ipadd
 interval = 5
 label-foreground = ${colors.foreground}
 label-background = ${xrdb:color6}
+label-padding = 1
+
+[module/recordstatus]
+type = custom/script
+exec = cat ~/.recordingicon ~/.recordingpid
+interval = 3
+label-foreground = ${colors.foreground}
+label-background = ${colors.background-alt2}
 label-padding = 1
