@@ -77,7 +77,7 @@ exec_always --no-startup-id ff-theme-util
 ################################################################################################
 
 #exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec st -e 'alsamixer'
+bindsym $mod+Ctrl+m exec st -e 'ncpamixer'
 #exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
 #bindsym $mod+Ctrl+m exec pavucontrol
@@ -116,6 +116,7 @@ bindsym Shift+Print --release exec --no-startup-id i3scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+grave exec --no-startup-id ducksearch
 bindsym $mod+Shift+grave exec --no-startup-id dmenuunicode
+bindsym $mod+Shift+m exec --no-startup-id dmenuoutput
 bindsym $mod+F1 exec --no-startup-id mupdf ~/.config/i3/i3guide.pdf
 bindsym $mod+F2 exec --no-startup-id testenv
 
@@ -259,6 +260,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 
 # Open specific applications in specific modes
 for_window [title="alsamixer"] floating enable
+for_window [title="ncpamixer"] floating enable
 for_window [class="calamares"] floating enable
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
@@ -402,7 +404,7 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #212121 #212121 #8EC07C #FDF6E3 #928374
+  client.focused          #212121 #212121 #8EC07C #FDF6E3 #689D6A
   client.focused_inactive #000000 #151515 #689D6A #454948
   client.unfocused        #000000 #151515 #EBDBB2 #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
