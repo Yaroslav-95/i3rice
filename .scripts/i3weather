@@ -3,8 +3,16 @@
 location="Saint Petersburg"
 
 if [[ "$location" != "" ]]
-    then
+then
     location="~${location// /+}"
 fi
 
-curl -s wttr.in/$location?format=2
+forecast=$(curl -s wttr.in/$location?format=2)
+
+if [[ ${#forecast} -gt 30 ]]
+then
+    echo "🤔"
+else
+    echo $forecast
+fi
+
