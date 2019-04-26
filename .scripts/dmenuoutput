@@ -7,6 +7,10 @@ if ! [ -f "$HOME/.dmenurc" ]; then
 fi
 . $HOME/.dmenurc
 
-output=$(listsinks | dmenu -i)
+output=$(listsinks | dmenu -i $DMENU_OPTIONS)
+
+[ "$output" != "" ] || exit
 
 changeoutput $output
+
+notify-send "Changed audio output to '$output'"
