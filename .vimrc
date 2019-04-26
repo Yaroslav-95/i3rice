@@ -116,4 +116,7 @@ let mapleader =" "
 	inoremap wj <Esc>
 
 " latex pdf viewer
-    let g:livepreview_previewer = 'mupdf'
+    let g:livepreview_previewer = 'zathura'
+
+" To avoid switching between keyboards
+    set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
