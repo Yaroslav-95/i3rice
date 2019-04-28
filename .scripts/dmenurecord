@@ -18,6 +18,7 @@ if ! [ -f "$HOME/.dmenurc" ]; then
 fi
 . $HOME/.dmenurc
 
+# Kill compositor, it glitches during recording
 killall -q compton
 
 updateicon() { \
@@ -110,8 +111,8 @@ asktoend() { \
 
 
 case "$1" in
-	screencast) screencastalsa;;
-	audio) audioalsa;;
+	screencast) screencastpulse;;
+	audio) audiopulse;;
 	video) video;;
 	kill) killrecording;;
 	*) ([ -f ~/.recordingpid ] && asktoend && exit) || askrecording;;

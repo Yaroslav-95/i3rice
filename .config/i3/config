@@ -73,16 +73,6 @@ exec_always --no-startup-id ff-theme-util
 
 
 ################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-#exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec st -e 'ncpamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -108,17 +98,21 @@ bindsym $mod+r exec $term -e ranger
 bindsym $mod+m exec $term -e ncmpcpp
 bindsym $mod+o exec env QT_AUTO_SCREEN_SCALE_FACTOR=0 zeal
 bindsym $mod+c exec --no-startup-id camtoggle
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+grave exec --no-startup-id ducksearch
+bindsym $mod+Shift+grave exec --no-startup-id dmenuunicode
+bindsym $mod+F1 exec --no-startup-id mupdf ~/.config/i3/i3guide.pdf
+
+# Screenshot and recording
 bindsym Print exec --no-startup-id i3scrot
 bindsym Ctrl+Print exec --no-startup-id i3-scrot -w
 bindsym $mod+Print exec --no-startup-id dmenurecord
 bindsym $mod+Delete exec $stoprec
 bindsym Shift+Print --release exec --no-startup-id i3scrot -s
-bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+grave exec --no-startup-id ducksearch
-bindsym $mod+Shift+grave exec --no-startup-id dmenuunicode
+
+# Sound
+bindsym $mod+Ctrl+m exec st -e 'ncpamixer'
 bindsym $mod+Shift+m exec --no-startup-id dmenuoutput
-bindsym $mod+F1 exec --no-startup-id mupdf ~/.config/i3/i3guide.pdf
-bindsym $mod+F2 exec --no-startup-id testenv
 
 # Applications that start with no gaps
 bindsym $mod+Shift+w		exec --no-startup-id firefox; gaps inner current set 0; gaps outer current set 0
@@ -199,15 +193,15 @@ bindsym $mod+Shift+Tab		workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 1:1 
-set $ws2 2:2 
-set $ws3 3:3 
-set $ws4 4:4 
-set $ws5 5:5 
-set $ws6 6:6 
-set $ws7 7:7 
-set $ws8 8:8 
-set $ws9 9:9 
+set $ws1 1:1
+set $ws2 2:2
+set $ws3 3:3
+set $ws4 4:4
+set $ws5 5:5
+set $ws6 6:6
+set $ws7 7:7
+set $ws8 8:8
+set $ws9 9:9
 
 # set $ws1 1
 # set $ws2 2
