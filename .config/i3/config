@@ -105,11 +105,10 @@ bindsym $mod+Shift+slash exec --no-startup-id mansplain
 bindsym $mod+F1 exec --no-startup-id zathura ~/.config/i3/i3guide.pdf
 
 # Screenshot and recording
-bindsym Print exec --no-startup-id i3scrot
-bindsym Ctrl+Print exec --no-startup-id i3-scrot -w
+bindsym Print exec --no-startup-id i3maim -q
+bindsym Shift+Print exec --no-startup-id i3maim
 bindsym $mod+Print exec --no-startup-id dmenurecord
 bindsym $mod+Delete exec $stoprec
-bindsym Shift+Print --release exec --no-startup-id i3scrot -s
 
 # Sound
 bindsym $mod+Ctrl+m exec st -e 'ncpamixer'

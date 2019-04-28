@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if ! [ -d $SCROT_DIR ]; then
+	mkdir -p $SCROT_DIR
+fi
+
+# Source settings from .dmenurc
+if ! [ -f "$HOME/.dmenurc" ]; then
+	cp /usr/share/dmenu/dmenurc $HOME/.dmenurc
+fi
+. $HOME/.dmenurc
+
+case "$1" in
+    --quick|-q)
+        maim $SCROT_DIR/fullscreen-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    *)
+        case "$(printf "a selected area\\ncurrent window\\nfull screen\\na selected area (copy)\\ncurrent window (copy)\\nfull screen (copy)" | dmenu -l 6 -i -p "Screenshot which area?" $DMENU_OPTIONS)" in
+            "a selected area") maim -s $SCROT_DIR/selected-"$(date '+%y%m%d-%H%M-%S').png" ;;
+            "current window") maim -i "$(xdotool getactivewindow)" $SCROT_DIR/window-"$(date '+%y%m%d-%H%M-%S').png" ;;
+            "full screen") maim $SCROT_DIR/fullscreen-"$(date '+%y%m%d-%H%M-%S').png" ;;
+            "a selected area (copy)") maim -s | xclip -selection clipboard -t image/png ;;
+            "current window (copy)") maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
+            "full screen (copy)") maim | xclip -selection clipboard -t image/png ;;
+            *) exit 0 ;;
+        esac
+esac
+
+notify-send "screenshot has been saved in $SCROT_DIR"
