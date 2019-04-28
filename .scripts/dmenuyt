@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if ! [ -f "$HOME/.dmenurc" ]; then
+	cp /usr/share/dmenu/dmenurc $HOME/.dmenurc
+fi
+. $HOME/.dmenurc
+
+VIDEO_DIR=$HOME/Video/youtube/
+AUDIO_DIR=$HOME/Video/youtube/audio
+
+cmd="youtube-dl --add-metadata -ic"
+save_dir=$VIDEO_DIR
+url=$(xclip -o)
+
+downtype=$(printf "video\\naudio" | dmenu -i -p "Download youtube video $url as:" $DMENU_OPTIONS)
+case "$downtype" in
+    video) cmd="youtube-dl --add-metadata -ic" & save_dir=$VIDEO_DIR;;
+    audio) cmd="youtube-dl --add-metadata -xic" & save_dir=$AUDIO_DIR;;
+    *) exit 0;;
+esac
+
+notify-send "Downloading from YouTube to $save_dir..."
+cd $save_dir
+$cmd $url
+notify-send "YouTube download has finished"
