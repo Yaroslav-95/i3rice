@@ -1,0 +1,6 @@
+#!/bin/sh
+
+vertical=$(($(xdotool getdisplaygeometry | awk '{print $2}') - newsize))
+horizontal=$(($(xdotool getdisplaygeometry | awk '{print $1}') - newwidth))
+
+convert $1 -resize ${horizontal}x${vertical}\> ~/.config/lockwall.png
