@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Source settings from .dmenurc
+if ! [ -f "$HOME/.dmenurc" ]; then
+	cp /usr/share/dmenu/dmenurc $HOME/.dmenurc
+fi
+. $HOME/.dmenurc
+
+man -k . | dmenu -i -l 25 $DMENU_OPTIONS | awk '{print $1}' | xargs -r man -Tpdf | zathura -
