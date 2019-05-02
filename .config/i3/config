@@ -44,8 +44,10 @@ bindsym $mod+d exec --no-startup-id dmenu_runc
 ###############################################################################################
 ## Startup scripts and programs                                                              ##
 ###############################################################################################
-# Background
-exec_always --no-startup-id setbg
+# Load monitor layout
+exec --no-startup-id ~/.screenlayout/default.sh
+# KDE Connect
+exec --no-startup-id kdeconnect-indicator
 # Mopidy music daemon
 exec_always --no-startup-id ~/.scripts/mopidy_launch.sh
 # Key remap and keyboard layout script
@@ -56,6 +58,8 @@ exec_always --no-startup-id ~/.scripts/remaps
 exec --no-startup-id blueman-applet
 # Polybar
 exec_always --no-startup-id ~/.scripts/polybar_launch
+# Background
+exec_always --no-startup-id setbg
 # Polkit
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Dunst notification handler
@@ -94,7 +98,7 @@ bindsym $mod+F7     		exec lmc next
 
 # Start Applications
 bindsym $mod+F3 exec --no-startup-id arandr
-bindsym $mod+r exec $term -e ranger
+bindsym $mod+r exec $term -e vifm_launch
 bindsym $mod+m exec $term -e ncmpcpp
 bindsym $mod+o exec env QT_AUTO_SCREEN_SCALE_FACTOR=0 zeal
 bindsym $mod+c exec --no-startup-id camtoggle

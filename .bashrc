@@ -7,13 +7,13 @@ export PS1="\[\033[38;5;14;48;5;0m\] \$(__git_ps1)\[$(tput sgr0)\]\[\033[48;5
 # Environment variables
 export PATH=$PATH:$HOME/.scripts
 export EDITOR="nvim"
-export TERMINAL="rxvt"
+export TERMINAL="st"
 export BROWSER="firefox"
 export MOZ_USE_XINPUT2=1
 
 # User specific environment and startup programs:
 export LANG=en_US.UTF-8
-export TERM=rxvt
+export TERM=st
 
 #Generic shortcuts:
 alias music="ncmpcpp"
@@ -21,7 +21,7 @@ alias clock="ncmpcpp -s clock"
 alias visualizer="vis"
 alias news="newsboat"
 alias email="neomutt"
-alias files="ranger"
+alias files="vifm_launch"
 alias audio="ncpamixer"
 alias calendar="calcurse"
 
@@ -40,6 +40,7 @@ alias p="sudo pacman"
 alias SS="sudo systemctl"
 alias v="nvim"
 alias r="ranger"
+alias vf="vifm_launch"
 alias sr="sudo ranger"
 alias ka="killall"
 alias g="git"

@@ -1,0 +1,163 @@
+# You can edit this file by hand, but it's recommended not to do that.
+
+# Marks:
+'H
+	/home/yaroslav/
+	..
+1556296785
+'b
+	/home/yaroslav/bin/
+	..
+1556296785
+'h
+	/home/yaroslav/
+	..
+1556296785
+'k
+	/home/yaroslav
+	Extra
+1556629457
+
+# Bookmarks:
+
+# TUI:
+al
+q1
+v2
+ov
+m-1
+l2
+r2
+
+# Left window history (oldest to newest):
+d/home/yaroslav/.config/vifm
+	colors
+1
+d/home/yaroslav/.config
+	vifm
+21
+d/home/yaroslav/.config/vifm
+	colors
+1
+d/home/yaroslav/.config/vifm/colors
+	..
+0
+d/home/yaroslav/.config/vifm
+	colors
+1
+d/home/yaroslav/.config
+	vifm
+21
+d/home/yaroslav
+	Downloads
+3
+d/home/yaroslav/.scripts
+	vifmimg
+25
+d/home/yaroslav
+	..
+0
+d/home/yaroslav/.config
+	retroarch
+18
+d/home/yaroslav/.config/retroarch
+	retroarch_qt.cfg
+19
+d/home/yaroslav
+	Downloads
+3
+d/home/yaroslav/Pictures
+	Backgrounds
+1
+d/home/yaroslav/Pictures/Backgrounds
+	AESTHETIC
+2
+d/home/yaroslav/Pictures/Backgrounds/AESTHETIC
+	189583.jpg
+2
+d/home/yaroslav
+	Downloads
+3
+
+# Right window history (oldest to newest):
+D/home/yaroslav/Desktop
+	..
+0
+D/home/yaroslav
+	Extra
+4
+D/home/yaroslav/Extra
+	Emuladores
+2
+D/home/yaroslav/Extra/Emuladores
+	..
+0
+D/home/yaroslav/Extra
+	Emuladores
+2
+D/home/yaroslav
+	Extra
+4
+D/home
+	yaroslav
+1
+D/home/yaroslav
+	Extra
+4
+D/home/yaroslav/Extra
+	OS
+3
+D/home/yaroslav/.config/vifm
+	..
+0
+D/home/yaroslav/.config
+	vifm
+9
+D/home/yaroslav
+	Documents
+2
+D/home/yaroslav/Documents
+	prog
+9
+D/home/yaroslav/.config/vifm
+	..
+0
+D/home/yaroslav/Repositories/i3rice
+	..
+0
+D/home/yaroslav
+	..
+0
+
+# Command line history (oldest to newest):
+:tabe ~
+:tabe
+:tab
+:sp ~
+:mkdir 
+:mkdir test
+:view
+:cd .scripts/
+:cd .config/
+:qa
+:cd Pictures/
+:q
+
+# Search history (oldest to newest):
+
+# Prompt history (oldest to newest):
+
+# Local filter history (oldest to newest):
+
+# Registers:
+""/home/yaroslav/Extra/файлопомойка/vifm
+
+# Directory stack (oldest to newest):
+
+# Trash content:
+t/home/yaroslav/.local/share/vifm/Trash/000_test
+	/home/yaroslav/Extra/test
+t/home/yaroslav/.local/share/vifm/Trash/001_vifmimg
+	/home/yaroslav/.scripts/vifmimg
+t/home/yaroslav/.local/share/vifm/Trash/000_vu
+	/home/yaroslav/.scripts/vu
