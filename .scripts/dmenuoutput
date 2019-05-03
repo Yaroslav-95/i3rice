@@ -13,4 +13,4 @@ output=$(listsinks | dmenu -i $DMENU_OPTIONS)
 
 changeoutput $output
 
-notify-send "Changed audio output to '$output'"
+notify-send "🔉 Audio output switched" "Audio output switched to '$output'"
