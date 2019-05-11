@@ -3,7 +3,7 @@
 # This script is called by i3 on startup.
 
 # Map the caps lock key to super...
-setxkbmap -layout 'us,es,ru' -option 'grp:alt_shift_toggle,caps:super'
+setxkbmap -model pc104 -layout 'us,es,ru' -option 'lv3:ralt_switch,grp:alt_shift_toggle,misc:typo,caps:super,grp_led:scroll'
 # If you don't want a us international keyboard, rather whatever keyboard
 # you set in your installation, comment out the above line and uncomment
 # the one below.
