@@ -98,9 +98,10 @@ audioalsa() { \
 askrecording() { \
 	choice=$(printf "screencast\\nvideo\\naudio" | dmenu -i -p "Select recording style:" $DMENU_OPTIONS)
 	case "$choice" in
-		screencast) screencastalsa;;
-		audio) audioalsa;;
+		screencast) screencastpulse;;
+		audio) audiopulse;;
 		video) video;;
+        *) compton -b;;
 	esac
 	}
 

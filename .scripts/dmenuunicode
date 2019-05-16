@@ -11,7 +11,7 @@ fi
 # Must have xclip installed to even show menu.
 xclip -h >/dev/null || exit
 
-chosen=$(grep -v "#" ~/.emoji | dmenu -i -l 20 $DMENU_OPTIONS)
+chosen=$(grep -v "#" ~/.emoji | dmenu -i -l 25 $DMENU_OPTIONS)
 
 [ "$chosen" != "" ] || exit
 

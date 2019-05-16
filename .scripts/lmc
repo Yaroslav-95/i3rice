@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 case "$1" in
 	"up") pamixer --allow-boost -i "$2" || amixer sset Master 2%+ ;;
