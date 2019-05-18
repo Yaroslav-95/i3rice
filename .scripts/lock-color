@@ -24,8 +24,6 @@ timeout="30000"
 #convert /tmp/screen.png -paint 1 -swirl 360 /tmp/screen.png
 #convert /tmp/screen.png -brightness-contrast -20,-20 -paint 1 -noise 0x8 -blur 9,9 /tmp/screen.png
 
-killall -q compton
-
 i3lock \
     --layoutcolor=$T \
     --timecolor=$T \
@@ -56,8 +54,12 @@ i3lock \
     -i ~/.config/lockwall.png
 
 # If still locked after $timeout milliseconds, turn off screen.
-while [[ $(pgrep -x i3lock) ]]; do
-	[[ $timeout -lt $(xssstate -i) ]] && xset dpms force off
+while [ "$(pgrep -x i3lock)" ]
+do
+	if [ $timeout -lt $(xssstate -i) ]
+    then
+        xset dpms force off
+    fi
 	sleep 1
 done
 
@@ -69,4 +71,3 @@ done
 # --datefont=monofur
 # etc
 
-compton -b

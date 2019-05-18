@@ -5,7 +5,7 @@
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
 set $term st
-# set $browser "firefox"
+set $browser "firefox"
 set $browser "env MOZ_USE_XINPUT2=1 firefox"
 set $stoprec --no-startup-id dmenurecord kill
 
@@ -44,21 +44,21 @@ bindsym $mod+d exec --no-startup-id dmenu_runc
 ###############################################################################################
 ## Startup scripts and programs                                                              ##
 ###############################################################################################
+# Key remap and keyboard layout script
+exec_always --no-startup-id ~/.scripts/remaps
 # Load monitor layout
 exec --no-startup-id ~/.screenlayout/default.sh
 # KDE Connect
 exec --no-startup-id kdeconnect-indicator
+# Polybar
+exec_always --no-startup-id ~/.scripts/polybar_launch
 # Mopidy music daemon
 exec_always --no-startup-id ~/.scripts/mopidy_launch.sh
-# Key remap and keyboard layout script
-exec_always --no-startup-id ~/.scripts/remaps
 # Unclutter to make the mouse invisible after a time
 # exec --no-startup-id unclutter
 # Bluetooth adapter applet
 exec --no-startup-id blueman-applet
-# Polybar
-exec_always --no-startup-id ~/.scripts/polybar_launch
-# Background
+# Wallpaper(s)
 exec_always --no-startup-id setbg
 # Polkit
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -71,7 +71,7 @@ exec --no-startup-id nm-applet
 # Battery applet for laptops
 exec --no-startup-id xfce4-power-manager
 # Autolock
-#exec --no-startup-id xautolock -time 1 -locker ~/.scripts/lock-color.sh
+#exec --no-startup-id xautolock -time 1 -locker ~/.scripts/lock-color
 exec_always --no-startup-id ff-theme-util
 
 
@@ -120,8 +120,7 @@ bindsym $mod+Ctrl+m exec st -e 'ncpamixer'
 bindsym $mod+Shift+m exec --no-startup-id dmenuoutput
 
 # Applications that start with no gaps
-bindsym $mod+Shift+w		exec --no-startup-id firefox; gaps inner current set 0; gaps outer current set 0
-bindsym $mod+Ctrl+w		exec --no-startup-id chromium; gaps inner current set 0; gaps outer current set 0
+bindsym $mod+Shift+w		exec --no-startup-id $browser
 bindsym $mod+g		exec --no-startup-id gimp; gaps inner current set 0; gaps outer current set 0
 bindsym $mod+i		exec --no-startup-id inkscape; gaps inner current set 0; gaps outer current set 0
 
