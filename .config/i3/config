@@ -53,7 +53,7 @@ exec --no-startup-id kdeconnect-indicator
 # Polybar
 exec_always --no-startup-id ~/.scripts/polybar_launch
 # Mopidy music daemon
-exec_always --no-startup-id ~/.scripts/mopidy_launch.sh
+exec_always --no-startup-id ~/.scripts/mopidy_launch
 # Unclutter to make the mouse invisible after a time
 # exec --no-startup-id unclutter
 # Bluetooth adapter applet
@@ -416,7 +416,7 @@ set_from_resource $term_color15    color15
 
 # Set inner/outer gaps
 gaps inner 14
-gaps outer -2
+gaps outer 0
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
