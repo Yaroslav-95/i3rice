@@ -33,6 +33,7 @@ map mkd :mkdir<space>
 map cd :cd<space>
 map bg1 :!cp %f ~/.config/wall1.png && setbg<CR>
 map bg2 :!cp %f ~/.config/wall2.png && setbg<CR>
+map bg3 :!cp %f ~/.config/wall3.png && setbg<CR>
 map bgl :!setbglblur %f<CR>
 map bgL :!setbglsimple %f<CR>
 map X :!ext %f &<CR>
@@ -94,10 +95,10 @@ noremap <S-Tab> :tabp<CR>
 " Pdf
 filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf
-        \ vifmimg pdfpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
-        " \ pdftotext -nopgbrk %c -
+        "\ vifmimg pdfpreview %px %py %pw %ph %c
+        "\ %pc
+        "\ vifmimg clear
+         \ pdftotext -nopgbrk %c -
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz

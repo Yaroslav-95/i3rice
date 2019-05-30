@@ -57,7 +57,7 @@ exec_always --no-startup-id ~/.scripts/mopidy_launch
 # Unclutter to make the mouse invisible after a time
 # exec --no-startup-id unclutter
 # Bluetooth adapter applet
-exec --no-startup-id blueman-applet
+exec_always --no-startup-id blueman-applet
 # Wallpaper(s)
 exec_always --no-startup-id setbg
 # Polkit
@@ -68,8 +68,6 @@ exec --no-startup-id dunst
 exec --no-startup-id compton -b
 # NetworkManager Applet
 exec --no-startup-id nm-applet
-# Battery applet for laptops
-exec --no-startup-id xfce4-power-manager
 # Autolock
 #exec --no-startup-id xautolock -time 1 -locker ~/.scripts/lock-color
 exec_always --no-startup-id ff-theme-util
@@ -79,10 +77,10 @@ exec_always --no-startup-id ff-theme-util
 ################################################################################################
 
 # Screen brightness controls
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 10 -fps 30; notify-send 'brightness up'"
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 10 -fps 30; notify-send 'brightness down'"
-bindsym $mod+Ctrl+Up exec "xbacklight -inc 10 -fps 30; notify-send 'brightness up'"
-bindsym $mod+Ctrl+Down exec "xbacklight -dec 10 -fps 30; notify-send 'brightness down'"
+bindsym XF86MonBrightnessUp exec "xbacklight -inc 5 -fps 30; notify-send 'brightness up'"
+bindsym XF86MonBrightnessDown exec "xbacklight -dec 5 -fps 30; notify-send 'brightness down'"
+bindsym $mod+Ctrl+Up exec "xbacklight -inc 5 -fps 30; notify-send 'brightness up'"
+bindsym $mod+Ctrl+Down exec "xbacklight -dec 5 -fps 30; notify-send 'brightness down'"
 
 # Media keys
 bindsym XF86AudioPrev		exec --no-startup-id "mpc prev"
@@ -100,7 +98,8 @@ bindsym $mod+F7     		exec lmc next
 bindsym $mod+F3 exec --no-startup-id arandr
 bindsym $mod+r exec $term -e vifm_launch
 bindsym $mod+m exec $term -e ncmpcpp
-bindsym $mod+o exec env QT_AUTO_SCREEN_SCALE_FACTOR=0 zeal
+#bindsym $mod+o exec env QT_AUTO_SCREEN_SCALE_FACTOR=0 zeal
+bindsym $mod+o exec --no-startup-id notistats
 bindsym $mod+c exec --no-startup-id camtoggle
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+grave exec --no-startup-id ducksearch
