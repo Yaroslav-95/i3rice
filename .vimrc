@@ -120,3 +120,8 @@ let mapleader =" "
 
 " To avoid switching between keyboards
     set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+" neomake
+    let g:neomake_javascript_enabled_makers = ['eslint']
+    let g:neomake_javascript_eslint_exe = $PWD .'/node_modules/.bin/eslint'
+    call neomake#configure#automake('w')
