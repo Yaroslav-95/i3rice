@@ -24,6 +24,7 @@ alias email="neomutt"
 alias files="vifm_launch"
 alias audio="ncpamixer"
 alias calendar="calcurse"
+alias calc="R --no-save"
 
 #Mounting drive shortcuts
 alias mnt="udisksctl mount -b"
