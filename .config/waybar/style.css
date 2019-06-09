@@ -1,0 +1,90 @@
+* {
+    font-size: 10px;
+    font-family: "FuraCode Nerd Font Mono";
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(26, 26, 26, 0.75);
+    color: #fdf6e3;
+    min-height: 0;
+}
+#custom-right-arrow-blue, #custom-left-arrow-blue {
+    color: #458588;
+    font-size: 23px;
+}
+#custom-right-arrow-black, #custom-left-arrow-black {
+    color: #000000;
+    font-size: 23px;
+}
+#custom-right-arrow-black {
+    background: #458588;
+}
+#custom-left-arrow-black {
+    background: #fabd2f;
+}
+#clock.1 {
+    background: #2D888D;
+}
+#clock.2 {
+    color: #1E1F23;
+    background: #DCDCCC;
+}
+#clock.3 {
+    background: #E00421;
+}
+#workspaces {
+    padding-left: 8px;
+    background: #000000;
+}
+#workspaces button {
+    padding: 0 4px;
+    color: #fdf6e3;
+}
+#workspaces button.focused {
+    color:  #689d6a;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+#workspaces button:hover {
+    border-color: #0C3D27;
+    background: #0C3D27;
+}
+#backlight, #memory, #cpu, #battery, #network, #tray, #pulseaudio, #mpd, #temperature, #custom-weather, #idle_inhibitor {
+    padding: 0 8px;
+}
+#tray {
+    background: #000000;
+}
+#backlight {
+    background: #fabd2f
+}
+#memory {
+    background: #ff6e67;
+}
+#temperature, #custom-weather {
+    background: #cc241d;
+}
+#cpu {
+    background: #f1fa8c;
+}
+#battery {
+    background: #83a598;
+}
+#battery.charging {
+    background: #689d6a;
+}
+#network {
+    background: #458588;
+}
+#pulseaudio, #mpd {
+    background-color: #458588;
+}
+#backlight, #memory, #cpu, #battery, #tray {
+    color: #1E1F23;
+}
+#clock{
+    padding: 0 16px;
+}
