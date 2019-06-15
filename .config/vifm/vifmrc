@@ -50,17 +50,17 @@ nmap <space> tj
 nmap q ZQ
 
 " Tab shortcuts
-map nt :tabnew ~/<CR>
-map nd :tabnew ~/Documents<CR>
-map nD :tabnew ~/Downloads<CR>
-map nmm :tabnew ~/Music<CR>
-map npp :tabnew ~/Pictures<CR>
-map npw :tabnew ~/Pictures/Backgrounds<CR>
-map nvv :tabnew ~/Video<CR>
-map nr :tabnew ~/Repositories<CR>
-map ns :tabnew ~/.scripts<CR>
-map ncf :tabnew ~/.config<CR>
-map nmd :tabnew /run/media<CR>
+map Tt :tabnew ~/<CR>
+map Td :tabnew ~/Documents<CR>
+map TD :tabnew ~/Downloads<CR>
+map Tmm :tabnew ~/Music<CR>
+map Tpp :tabnew ~/Pictures<CR>
+map Tpw :tabnew ~/Pictures/Backgrounds<CR>
+map Tvv :tabnew ~/Video<CR>
+map Tr :tabnew ~/Repositories<CR>
+map Ts :tabnew ~/.scripts<CR>
+map Tcf :tabnew ~/.config<CR>
+map Tmd :tabnew /run/media<CR>
 noremap <Tab> :tabn<CR>
 noremap <S-Tab> :tabp<CR>
 
@@ -128,7 +128,7 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
          \*.as[fx]
         \ {View using mpv}
-        \ mpv %f,
+        \ mpv --gpu-context=wayland %f,
         \ {View using ffplay}
         \ ffplay -fs -autoexit %f,
         \ {View using Dragon}
@@ -162,10 +162,10 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+        \ {View in imv}
+        \ imv -d %d &,
         \ {View in sxiv}
         \ sxiv -ia %c %d &,
-        \ {View in imv}
-        \ imv -b 1D2330 -d %d &,
         \ {View in feh}
         \ feh %d &,
         \ {View in cacaview}

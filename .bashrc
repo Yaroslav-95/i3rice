@@ -7,8 +7,8 @@ export PS1="\[\033[38;5;14;48;5;0m\] \$(__git_ps1)\[$(tput sgr0)\]\[\033[48;5
 # Environment variables
 export PATH=$PATH:$HOME/.scripts
 export EDITOR="nvim"
-export TERMINAL="st"
-export BROWSER="firefox"
+export TERMINAL="termite"
+export BROWSER="qutebrowser"
 export MOZ_USE_XINPUT2=1
 
 # User specific environment and startup programs:
@@ -25,6 +25,7 @@ alias files="vifm_launch"
 alias audio="ncpamixer"
 alias calendar="calcurse"
 alias calc="R --no-save"
+alias eslint="./node_modules/eslint/bin/eslint.js"
 
 #Mounting drive shortcuts
 alias mnt="udisksctl mount -b"
@@ -47,6 +48,9 @@ alias ka="killall"
 alias g="git"
 alias gitup="git push origin master"
 alias rf="source ~/.bashrc"
+
+# Terminal "Web apps"
+alias rickroll="curl -s -L http://bit.ly/10hA8iC | bash"
 weath() { curl wttr.in/$1 ;} # Check the weather (give city or leave blank).
 
 # Adding color
