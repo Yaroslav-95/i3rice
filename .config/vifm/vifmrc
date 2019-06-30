@@ -31,9 +31,7 @@ nnoremap o :file &<cr>
 map E :!$EDITOR %f<CR>
 map mkd :mkdir<space>
 map cd :cd<space>
-map bg1 :!cp %f ~/.config/wall1.png && setbg<CR>
-map bg2 :!cp %f ~/.config/wall2.png && setbg<CR>
-map bg3 :!cp %f ~/.config/wall3.png && setbg<CR>
+map bgg :!cp %f ~/.config/wall1.png && setbg<CR>
 map bgl :!setbglblur %f<CR>
 map bgL :!setbglsimple %f<CR>
 map X :!ext %f &<CR>
@@ -50,17 +48,17 @@ nmap <space> tj
 nmap q ZQ
 
 " Tab shortcuts
-map Tt :tabnew ~/<CR>
-map Td :tabnew ~/Documents<CR>
-map TD :tabnew ~/Downloads<CR>
-map Tmm :tabnew ~/Music<CR>
-map Tpp :tabnew ~/Pictures<CR>
-map Tpw :tabnew ~/Pictures/Backgrounds<CR>
-map Tvv :tabnew ~/Video<CR>
-map Tr :tabnew ~/Repositories<CR>
-map Ts :tabnew ~/.scripts<CR>
-map Tcf :tabnew ~/.config<CR>
-map Tmd :tabnew /run/media<CR>
+map Ot :tabnew ~/<CR>
+map Od :tabnew ~/Documents<CR>
+map OD :tabnew ~/Downloads<CR>
+map Omm :tabnew ~/Music<CR>
+map Opp :tabnew ~/Pictures<CR>
+map Opw :tabnew ~/Pictures/Backgrounds<CR>
+map Ovv :tabnew ~/Video<CR>
+map Or :tabnew ~/Repositories<CR>
+map Os :tabnew ~/.scripts<CR>
+map Ocf :tabnew ~/.config<CR>
+map Omd :tabnew /run/media<CR>
 noremap <Tab> :tabn<CR>
 noremap <S-Tab> :tabp<CR>
 
@@ -162,10 +160,10 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in imv}
-        \ imv -d %d -n %f &,
         \ {View in sxiv}
         \ sxiv -ia %c %d &,
+        \ {View in imv}
+        \ imv -d %d -n %f &,
         \ {View in feh}
         \ feh %d &,
         \ {View in cacaview}
