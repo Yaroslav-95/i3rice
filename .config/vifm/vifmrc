@@ -31,7 +31,9 @@ nnoremap o :file &<cr>
 map E :!$EDITOR %f<CR>
 map mkd :mkdir<space>
 map cd :cd<space>
-map bgg :!cp %f ~/.config/wall1.png && setbg<CR>
+map bg1 :!cp %f ~/.config/wall1.png && setbg<CR>
+map bg2 :!cp %f ~/.config/wall2.png && setbg<CR>
+map bg3 :!cp %f ~/.config/wall3.png && setbg<CR>
 map bgl :!setbglblur %f<CR>
 map bgL :!setbglsimple %f<CR>
 map X :!ext %f &<CR>
@@ -59,8 +61,8 @@ map Or :tabnew ~/Repositories<CR>
 map Os :tabnew ~/.scripts<CR>
 map Ocf :tabnew ~/.config<CR>
 map Omd :tabnew /run/media<CR>
-noremap <Tab> :tabn<CR>
-noremap <S-Tab> :tabp<CR>
+noremap J :tabn<CR>
+noremap K :tabp<CR>
 
 " ------------------------------------------------------------------------------
 
@@ -126,7 +128,7 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
          \*.as[fx]
         \ {View using mpv}
-        \ mpv --gpu-context=wayland %f,
+        \ mpv %f,
         \ {View using ffplay}
         \ ffplay -fs -autoexit %f,
         \ {View using Dragon}
@@ -159,7 +161,7 @@ filetype *.[1-8] man ./%c
 fileviewer *.[1-8] man ./%c | col -b
 
 " Images
-filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm,*.nef
         \ {View in sxiv}
         \ sxiv -ia %c %d &,
         \ {View in imv}
@@ -177,9 +179,9 @@ fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
         " \ %pc
         " \ imgc %px %py %pw %ph   NOT NEEDED IN XTERM
 fileviewer *.gif
-        \ vifmimg gifpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+        " \ vifmimg gifpreview %px %py %pw %ph %c
+        " \ %pc
+        " \ vifmimg clear
 
 " OpenRaster
 filextype *.ora
