@@ -11,6 +11,7 @@ let mapleader =" "
     set background=dark
     set termguicolors
     set guicursor=n-v-c-sm:hor20,i-ci-ve:ver25,r-cr-o:block
+    set cursorline
     let g:gruvbox_italic=1
     let g:airline_theme='bubblegum'
     let g:airline#extensions#tabline#enabled = 1
@@ -102,8 +103,15 @@ let mapleader =" "
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" Join line with ctrl
+    nnoremap <M-j> J
+
+" Easier tab navigation (similar to qutebrowser)
+    nnoremap J :tabn<cr>
+    nnoremap K :tabp<cr>
+
 " C-T for new tab
-	nnoremap <C-t> :tabnew<cr>
+	nnoremap <C-t> :tabe<Space>
 
 " Navigating with guides
 	inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
