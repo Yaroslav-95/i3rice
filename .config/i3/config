@@ -4,9 +4,8 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-set $term st
-set $browser "firefox"
-set $browser "env MOZ_USE_XINPUT2=1 firefox"
+set $term termite
+set $browser "qutebrowser"
 set $stoprec --no-startup-id dmenurecord kill
 
 # set default desktop layout (default is tiling)
@@ -115,7 +114,7 @@ bindsym $mod+Print exec --no-startup-id dmenurecord
 bindsym $mod+Delete exec $stoprec
 
 # Sound
-bindsym $mod+Ctrl+m exec st -e 'ncpamixer'
+bindsym $mod+Ctrl+m exec $term -e 'ncpamixer'
 bindsym $mod+Shift+m exec --no-startup-id dmenuoutput
 
 # Applications that start with no gaps
@@ -124,7 +123,7 @@ bindsym $mod+g		exec --no-startup-id gimp; gaps inner current set 0; gaps outer 
 bindsym $mod+i		exec --no-startup-id inkscape; gaps inner current set 0; gaps outer current set 0
 
 # Dropdown/scratchpad applications
-bindsym $mod+p exec --no-startup-id ddspawn tmuxdd
+bindsym $mod+Shift+p exec --no-startup-id ddspawn tmuxdd
 bindsym $mod+Shift+v exec --no-startup-id dgspawn vk-messenger VK
 bindsym $mod+Shift+t exec --no-startup-id dgspawn telegram-desktop TelegramDesktop
 
@@ -207,16 +206,6 @@ set $ws8 8:8
 set $ws9 9:9
 set $ws10 10:10
 
-# set $ws1 1
-# set $ws2 2
-# set $ws3 3
-# set $ws4 4
-# set $ws5 5
-# set $ws6 6
-# set $ws7 7
-# set $ws8 8
-# set $ws9 9
-
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -253,12 +242,6 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws9; workspace $ws10
 
-# Open applications on specific workspaces
-# assign [class="Thunderbird"] $ws1
-# assign [class="Pale moon"] $ws2
-# assign [class="Pcmanfm"] $ws3
-# assign [class="Skype"] $ws5
-
 # Open specific applications in specific modes
 for_window [title="alsamixer"] floating enable
 for_window [title="ncpamixer"] floating enable
@@ -287,15 +270,12 @@ no_focus [title="mpvfloat"]
 
 # VK Messenger
 for_window [class="VK"] floating enable sticky enable
-for_window [class="VK"] move scratchpad
 
 # Telegram Desktop
 for_window [class="TelegramDesktop"] floating enable sticky enable
-for_window [class="TelegramDesktop"] move scratchpad
 
 # Terminal
 for_window [instance="tmuxdd"] floating enable sticky enable
-for_window [instance="tmuxdd"] move scratchpad
 
 # switch to workspace with urgent window automatically
 # for_window [urgent=latest] focus
