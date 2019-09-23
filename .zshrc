@@ -9,9 +9,9 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
-PROMPT='%F{yellow}%n%f%F{red}@%f%F{cyan}%m%f %{[38;5;38m%}%B%~%b%f '$'\n'"%F{green}%#%f "
-RPROMPT='%F{yellow} ${vcs_info_msg_0_}%f'
-zstyle ':vcs_info:git:*' formats '%b'
+PROMPT=$'\n''%{[38;5;14m%}%B%~ ${reset_color}%F{yellow}${vcs_info_msg_0_}%f'$'\n''%F{green}→%f '
+RPROMPT='%{[38;5;14m%} %n%f@%F{red}%m%f'
+zstyle ':vcs_info:git:*' formats ' %b'
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -25,8 +25,7 @@ _comp_options+=(globdots)		# Include hidden files.
 
 zstyle :compinstall filename '/home/yaroslav/.zshrc'
 
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
+# History
 HISTFILE=~/.cache/zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
@@ -67,7 +66,6 @@ export PATH
 export EDITOR="nvim"
 export TERMINAL="termite"
 export BROWSER="qutebrowser"
-export MOZ_USE_XINPUT2=1
 
 # Generic shortcuts
 alias music="ncmpcpp"
